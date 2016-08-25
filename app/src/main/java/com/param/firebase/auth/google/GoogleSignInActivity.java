@@ -25,6 +25,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.param.firebase.R;
 import com.param.firebase.auth.BaseActivity;
+import com.param.firebase.database.DatabaseActivity;
 
 
 /**
@@ -86,6 +87,8 @@ public class GoogleSignInActivity extends BaseActivity implements
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
+                    startDatabaseActivity();
+
                     // User is signed in
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
                 } else {
@@ -154,6 +157,9 @@ public class GoogleSignInActivity extends BaseActivity implements
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         Log.d(TAG, "signInWithCredential:onComplete:" + task.isSuccessful());
 
+                        if(task.isSuccessful()) {
+                            startDatabaseActivity();
+                        }
                         // If sign in fails, display a message to the user. If sign in succeeds
                         // the auth state listener will be notified and logic to handle the
                         // signed in user can be handled in the listener.
@@ -167,6 +173,13 @@ public class GoogleSignInActivity extends BaseActivity implements
                         // [END_EXCLUDE]
                     }
                 });
+    }
+
+    private void startDatabaseActivity() {
+
+        Intent intent = new Intent(GoogleSignInActivity.this, DatabaseActivity.class);
+        startActivity(intent);
+        finish();
     }
     // [END auth_with_google]
 

@@ -8,32 +8,29 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_application_id"/>
 
         <activity android:name=".MainActivity">
         </activity>
         <activity android:name=".auth.AuthActivity">
-
-
         </activity>
         <activity android:name=".auth.google.GoogleSignInActivity">
-
-        </activity>
-        <activity android:name=".auth.facebook.FacebookLoginActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".auth.facebook.FacebookLoginActivity">
+        </activity>
+        <activity android:name=".auth.anonymous.AnonymousAuthActivity">
 
         </activity>
-
-
-
-
-
+        <activity android:name=".database.DatabaseActivity">
+        </activity>
     </application>
 
 </manifest>

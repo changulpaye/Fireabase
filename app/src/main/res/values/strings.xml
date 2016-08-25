@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Learning</string>
-    <string name="facebook_app_id">532471986958225</string>
+    <string name="facebook_application_id" translatable="false">532471986958225</string>
     <string name="google_client_id">119073065153-l6em9bmo4him895i5lffrsj7mreles7d.apps.googleusercontent.com</string>
     <string name="authentication">AUTHENTICATION</string>
 
@@ -20,5 +20,11 @@
 
     <string name="facebook_status_fmt">Facebook User: %s</string>
     <string name="facebook_title_text">Facebook Login</string>
+    <string name="hint_email">Enter Email Id</string>
+    <string name="hint_password">Enter password</string>.
+
+
+    <string name="id_fmt">User ID: %s</string>
+    <string name="email_fmt">Email: %s</string>
 
 </resources>

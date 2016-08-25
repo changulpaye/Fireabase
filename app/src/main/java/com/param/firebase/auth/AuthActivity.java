@@ -66,8 +66,8 @@ public class AuthActivity extends AppCompatActivity {
         } else {
             // not signed in
             Toast.makeText(AuthActivity.this, "User not logged in.", Toast.LENGTH_SHORT).show();
-            emailPasswordLogin();
-            //facebookLogin();
+           // emailPasswordLogin();
+            facebookLogin();
           //  googleLogin();
         }
 

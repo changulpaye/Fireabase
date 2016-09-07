@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.param.firebase">
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,22 +19,29 @@
 
         <activity android:name=".MainActivity">
         </activity>
-        <activity android:name=".auth.AuthActivity">
+        <!--
+            <activity android:name=".auth.AuthActivity">
         </activity>
+        -->
         <activity android:name=".auth.google.GoogleSignInActivity">
+
+        </activity>
+        <activity android:name=".auth.facebook.FacebookLoginActivity">
+        </activity>
+        <activity android:name=".auth.anonymous.AnonymousAuthActivity">
+        </activity>
+        <activity android:name=".database.DatabaseActivity">
+        </activity>
+        <activity
+            android:name=".auth.email.LoginActivity"
+            android:label="@string/title_activity_login">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
-        <activity android:name=".auth.facebook.FacebookLoginActivity">
-        </activity>
-        <activity android:name=".auth.anonymous.AnonymousAuthActivity">
 
-        </activity>
-        <activity android:name=".database.DatabaseActivity">
         </activity>
     </application>
 

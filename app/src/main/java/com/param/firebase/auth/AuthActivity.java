@@ -1,11 +1,10 @@
+/*
 package com.param.firebase.auth;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
-
-import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.FirebaseAuth;
 import com.param.firebase.MainActivity;
 import com.param.firebase.R;
@@ -71,7 +70,8 @@ public class AuthActivity extends AppCompatActivity {
           //  googleLogin();
         }
 
-       /* mAuthListener = new FirebaseAuth.AuthStateListener() {
+       */
+/* mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
@@ -84,7 +84,8 @@ public class AuthActivity extends AppCompatActivity {
                 }
                 // ...
             }
-        };*/
+        };*//*
+
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -104,3 +105,4 @@ public class AuthActivity extends AppCompatActivity {
 
 
 }
+*/
